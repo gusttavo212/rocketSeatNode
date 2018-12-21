@@ -12,21 +12,10 @@ mongoose.connect("mongodb://localhost:27017/nodeapi", {useNewUrlParser: true})
 
 requireDir('./src/models')
 
-const Product = mongoose.model('Product')
 
-
-//Primeira Rota
-app.get('/',(req,res) => {//Arrow Function
-    
-    Product.create({
-        title: 'Reactive Native',
-        description: 'Biuld native apps with React',
-        url: 'http://github.com/facebook/react-native'        
-    })
-
-    return res.send('Olá cara')
-})//Rota raiz
-
+//Primeira rota
+//toda vez que receber uma rota apartir de api mande para routes
+app.use('/api', require("./src/models/routes"))
 
 app.listen(3001)
 

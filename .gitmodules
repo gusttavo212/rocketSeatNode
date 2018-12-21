@@ -1,0 +1,3 @@
+[submodule "rocketSeatNode"]
+	path = rocketSeatNode
+	url = https://github.com/gusttavo212/rocketSeatNode.git

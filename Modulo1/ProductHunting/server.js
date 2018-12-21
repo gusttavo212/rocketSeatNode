@@ -5,6 +5,8 @@ const requireDir = require('require-dir')
 
 //Iniciando o app
 const app = express()
+//Permitir o envio de json
+app.use(express.json())
 
 
 //Iniciando o DB

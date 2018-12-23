@@ -1,12 +1,15 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const requireDir = require('require-dir')
+const cors = require('cors')
 
 
 //Iniciando o app
 const app = express()
 //Permitir o envio de json
 app.use(express.json())
+//Tornar a API publica
+app.use(cors())
 
 
 //Iniciando o DB

@@ -13,7 +13,7 @@ app.use(cors())
 
 
 //Iniciando o DB
-mongoose.connect("mongodb://localhost:27017/nodeapi", {useNewUrlParser: true})
+mongoose.connect('mongodb://gadsden:250433@localhost/nodeapi?authSource=admin&w=1', { useNewUrlParser: true })
 
 requireDir('./src/models')
 
